@@ -101,11 +101,13 @@ export const TopBar = () => {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {pages.map((page) => (
-                  <Button key={page} href={page} onClick={handleCloseNavMenu}>
-                    <div sx={{ fontFamily: fontType }}>{page}</div>
-                  </Button>
-                ))}
+                <div className="grid grid-flow-rown gap-1">
+                  {pages.map((page) => (
+                    <Button key={page} href={page} onClick={handleCloseNavMenu}>
+                      <div sx={{ fontFamily: fontType }}>{page}</div>
+                    </Button>
+                  ))}
+                </div>
               </Menu>
             </Box>
             <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
