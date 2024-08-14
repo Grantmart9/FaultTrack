@@ -21,7 +21,7 @@ export const SaveButtonStyle = {
 
 export const CameraButtonStyle = {
   backgroundColor: "#424242",
-  width:"30pt",
+  width: "30pt",
   opacity: "75%",
   color: "#ffffff",
 };
@@ -30,7 +30,6 @@ export const ConditionButtonStyle = {
   backgroundColor: "#424242",
   opacity: "75%",
   color: "#ffffff",
-  
 };
 
 export const PopoverStyle = {
@@ -50,7 +49,7 @@ export const Background2 = "#424242";
 //export const Background1 = "#ddfad4";
 //export const Background2 = "#d4f7fa";
 
-export  const videoConstraints = {
+export const videoConstraints = {
   width: 1280,
   height: 720,
   facingMode: "user",

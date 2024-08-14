@@ -12,7 +12,7 @@ export const JobDetails = () => {
   const SiteDetails = () => {
     return (
       <div className="grid grid-flow-row gap-1">
-        <div className="grid grid-flow-col gap-1">
+        <div style={{minWidth:"400pt"}} className="grid grid-flow-col gap-1">
           <div className="text-center my-auto text-gray-light">
             Site access ref no
           </div>
@@ -73,7 +73,7 @@ export const JobDetails = () => {
             </div>
           </div>
           <div
-            style={{ backgroundColor: Background2, opacity: "90%" }}
+            style={{ backgroundColor: Background2, opacity: "90%",minWidth:"100pt" }}
             className="rounded-md p-2"
           >
             <div className="text-center my-auto text-gray-light">
@@ -90,7 +90,7 @@ export const JobDetails = () => {
             </div>
           </div>
           <div
-            style={{ backgroundColor: Background2, opacity: "90%" }}
+            style={{ backgroundColor: Background2, opacity: "90%",minWidth:"200pt" }}
             className="rounded-md p-2"
           >
             <div className="text-center my-auto text-gray-light">Site</div>

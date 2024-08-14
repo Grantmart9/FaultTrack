@@ -254,3 +254,5 @@ export const Preventative_sheets = [
   "Fault description",
   "priority",
 ];
+
+export const ConditionList = ["Good", "Bad", "NA"];

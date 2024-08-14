@@ -12,65 +12,6 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 export const SearchBar = () => {
-  const [startDate, setStartDate] = useState(new Date());
-  const [selected, setSelected] = useState(new Date());
-
-  const SearchBy = () => {
-    return (
-      <div
-        style={{ backgroundColor: Background2, opacity: "90%" }}
-        className="rounded-md p-1 shadow-inner"
-      >
-        <div className="rounded-md text-center my-auto text-gray-light mb-1">
-          Search by
-        </div>
-        <div className="rounded-md grid grid-cols-3 p-1">
-          <div className="text-center my-auto text-gray-light">Site</div>
-          <div className="flex align-center justify-center">
-            <Switch color="error" />
-          </div>
-          <div className="text-center my-auto text-gray-light">Technician</div>
-        </div>
-      </div>
-    );
-  };
-
-  const SearchField = () => {
-    return (
-      <div
-        style={{ backgroundColor: Background2, opacity: "90%" }}
-        className="grid grid-cols-2 rounded-md p-1 shadow-md"
-      >
-        <div className="ml-2 my-auto">
-          <TextField
-            sx={{ backgroundColor: "white" }}
-            className="rounded-md"
-            size="small"
-            fullWidth="true"
-          />
-        </div>
-        <div className="flex mx-auto my-auto">
-          <Button
-            size="small"
-            fullwidth="true"
-            className="shadow-md"
-            sx={{
-              backgroundColor: "#424242",
-              opacity: "75%",
-              color: "#ffffff",
-              maxHeight: "30pt",
-            }}
-          >
-            <div className="p-2 text-gray-light">
-              Search
-              <SearchIcon />
-            </div>
-          </Button>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <Slide direction="left" in={true} timeout={1200}>
       <div
@@ -80,7 +21,7 @@ export const SearchBar = () => {
         <div className="grid grid-cols-3 gap-2 rounded-md">
           <div
             style={{ backgroundColor: Background2, opacity: "90%" }}
-            className="grid grid-flow-col gap-1 rounded-md p-1 shadow-md"
+            className="inline-flex rounded-md p-4 shadow-md"
           >
             <div className="text-center my-auto text-gray-light">Date</div>
             <div className="my-auto mx-auto">
@@ -91,8 +32,54 @@ export const SearchBar = () => {
               </LocalizationProvider>
             </div>
           </div>
-          <SearchBy />
-          <SearchField />
+          <div
+            style={{ backgroundColor: Background2, opacity: "90%" }}
+            className="rounded-md p-1 shadow-inner"
+          >
+            <div className="rounded-md text-center my-auto text-gray-light mb-1">
+              Search by
+            </div>
+            <div className="rounded-md grid grid-cols-3 p-1">
+              <div className="text-center my-auto text-gray-light">Site</div>
+              <div className="flex align-center justify-center">
+                <Switch color="error" />
+              </div>
+              <div className="text-center my-auto text-gray-light">
+                Technician
+              </div>
+            </div>
+          </div>
+          <div
+            style={{ backgroundColor: Background2, opacity: "90%" }}
+            className="grid grid-cols-2 rounded-md p-1 shadow-md"
+          >
+            <div className="ml-2 my-auto">
+              <TextField
+                sx={{ backgroundColor: "white" }}
+                className="rounded-md"
+                size="small"
+                fullWidth="true"
+              />
+            </div>
+            <div className="flex mx-auto my-auto">
+              <Button
+                size="small"
+                fullwidth="true"
+                className="shadow-md"
+                sx={{
+                  backgroundColor: "#424242",
+                  opacity: "75%",
+                  color: "#ffffff",
+                  maxHeight: "30pt",
+                }}
+              >
+                <div className="p-2 text-gray-light">
+                  Search
+                  <SearchIcon />
+                </div>
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </Slide>

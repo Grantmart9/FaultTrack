@@ -22,6 +22,7 @@ import {
   Sheets,
   Site_sheets,
   Preventative_sheets,
+  ConditionList,
 } from "components/Data/Sheets";
 import { JobDetails } from "components/JobDetails";
 import Cookies from "universal-cookie";
@@ -113,8 +114,6 @@ export const Nodes = () => {
   };
 
   const Questions = () => {
-    const ConditionList = ["Good", "Bad", "NA"];
-
     return (
       <Slide direction="up" in={true} timeout={1200}>
         <div
@@ -436,21 +435,22 @@ export const Nodes = () => {
 
     const rows = [
       createData("Wed 14 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
-      createData("Wed 13 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
+      createData("Wed 13 Aug", "Kannonkop", "Grant Marthinus", "Incomplete"),
       createData("Wed 12 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
       createData("Wed 11 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
       createData("Wed 10 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
       createData("Wed 9 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
-      createData("Wed 8 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
+      createData("Wed 8 Aug", "Kannonkop", "Grant Marthinus", "Incomplete"),
       createData("Wed 14 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
       createData("Wed 14 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
-      createData("Wed 14 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
-      createData("Wed 14 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
-      createData("Wed 14 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
-      createData("Wed 14 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
-      createData("Wed 14 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
-      createData("Wed 14 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
+      createData("Wed 14 Aug", "Kannonkop", "Grant Marthinus", "Incomplete"),
+      createData("Wed 15 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
+      createData("Wed 18 Aug", "Kannonkop", "Grant Marthinus", "Incomplete"),
+      createData("Wed 17 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
+      createData("Wed 19 Aug", "Kannonkop", "Grant Marthinus", "Incomplete"),
+      createData("Wed 1 Aug", "Kannonkop", "Grant Marthinus", "Completed"),
     ];
+
     return (
       <div
         style={{ backgroundColor: Background1, opacity: "80%" }}
@@ -503,12 +503,132 @@ export const Nodes = () => {
       {size == "MD" || size == "SM" || size == "XS" ? (
         <div>
           <div
-            style={{ color: "#da4540", font: "bold", marginTop: "15%" }}
+            style={{ color: "#da4540", font: "bold", marginTop: "5%" }}
             className="text-2xl font-bold font-sans flex align-center justify-center p-2 w-full"
           >
             Nodes
           </div>
-          <Buttons handleAdd={handleAdd} handleSearch={handleSearch} />
+          <div className="block w-full">
+            <Buttons handleAdd={handleAdd} handleSearch={handleSearch} />
+            {ButtonOn == "Check_sheets" || "Preventative" ? (
+              <>
+                <Slide direction="left" in={true} timeout={800}>
+                  <div
+                    style={{ backgroundColor: Background1, opacity: "90%" }}
+                    className="bg-gray-light rounded-md p-1 w-full"
+                  >
+                    <div className="grid grid-flow-row gap-2 rounded-md p-1">
+                      <div
+                        style={{ backgroundColor: Background2, opacity: "90%" }}
+                        className="rounded-md p-2"
+                      >
+                        <div className="grid grid-flow-row gap-1">
+                          <div className="grid grid-flow-col gap-1">
+                            <div className="text-center my-auto text-gray-light">
+                              Site access ref no
+                            </div>
+                            <div className="my-auto">
+                              <TextField
+                                sx={{ backgroundColor: "white" }}
+                                className="rounded-md"
+                                size="small"
+                                fullWidth="true"
+                                placeholder="ex J432212"
+                              />
+                            </div>
+                          </div>
+                          <div className="grid grid-flow-col gap-1">
+                            <div className="text-center my-auto text-gray-light">
+                              GPS co-ordinates
+                            </div>
+                            <div className="my-auto">
+                              <TextField
+                                sx={{ backgroundColor: "white" }}
+                                className="rounded-md"
+                                size="small"
+                                fullWidth="true"
+                                placeholder="ex 39.23.45.12.55"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        style={{ backgroundColor: Background2, opacity: "90%" }}
+                        className="rounded-md p-2"
+                      >
+                        <div className="text-center my-auto text-gray-light">
+                          Date
+                        </div>
+                        <div
+                          style={{
+                            minHeight: "30pt",
+                            alignContent: "center",
+                          }}
+                          className="text-center text-gray-light"
+                        >
+                          {Moment(Date()).format("MMMM Do YYYY, h:mm a")}
+                        </div>
+                      </div>
+                      <div
+                        style={{ backgroundColor: Background2, opacity: "90%" }}
+                        className="rounded-md p-2"
+                      >
+                        <div className="text-center my-auto text-gray-light">
+                          Technician
+                        </div>
+                        <div
+                          style={{
+                            minHeight: "30pt",
+                            alignContent: "center",
+                          }}
+                          className="text-center text-gray-light"
+                        >
+                          {cookies.get("Username")}
+                        </div>
+                      </div>
+                      <div
+                        style={{ backgroundColor: Background2, opacity: "90%" }}
+                        className="rounded-md p-2"
+                      >
+                        <div className="text-center my-auto text-gray-light">
+                          Site
+                        </div>
+                        <div className="flex align-center justify-center">
+                          <TextField
+                            sx={{ backgroundColor: "white" }}
+                            className="rounded-md"
+                            size="small"
+                            fullWidth="true"
+                            placeholder="ex Kannonkop"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Slide>
+              </>
+            ) : (
+              <SearchBar />
+            )}
+          </div>
+          <div>
+            {ButtonOn == "Check_sheets" ? (
+              <div>
+                <SelectedSheet />
+              </div>
+            ) : null}
+            {ButtonOn == "Search" ? (
+              <div>
+                <SearchResults />
+              </div>
+            ) : null}
+            {ButtonOn == "Preventative" ? (
+              <div>
+                <PreventativeSheet />
+              </div>
+            ) : null}
+          </div>
         </div>
       ) : (
         <div>
@@ -516,7 +636,7 @@ export const Nodes = () => {
             style={{ color: "#da4540", marginTop: "1pt", font: "bold" }}
             className="text-2xl font-bold font-sans flex align-center justify-center p-2 w-full"
           >
-           Nodes
+            Nodes
           </div>
           <div className="inline-flex w-full">
             <Buttons handleAdd={handleAdd} handleSearch={handleSearch} />

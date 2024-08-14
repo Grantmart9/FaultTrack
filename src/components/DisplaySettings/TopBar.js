@@ -127,7 +127,7 @@ export const TopBar = () => {
                 textDecoration: "none",
               }}
             >
-              <img src={logo} alt={logo} />
+              <img style={{maxWidth:"100pt"}} src={logo} alt={logo} />
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
