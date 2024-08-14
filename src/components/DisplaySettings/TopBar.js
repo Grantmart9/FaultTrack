@@ -14,7 +14,12 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import logo from "Images/logo.png";
 import Cookies from "universal-cookie";
-import { Background1, Background2, fontType } from "components/DisplaySettings/feutures";
+import {
+  Background1,
+  Background2,
+  fontType,
+  SaveButtonStyle,
+} from "components/DisplaySettings/feutures";
 const cookies = new Cookies();
 
 const pages = ["HighSites", "Nodes"];
@@ -42,7 +47,11 @@ export const TopBar = () => {
     <div>
       <AppBar
         position="sticky"
-        sx={{ backgroundColor: Background2, opacity: "100%", maxHeight: "4rem" }}
+        sx={{
+          backgroundColor: Background2,
+          opacity: "100%",
+          maxHeight: "4rem",
+        }}
       >
         <Container maxWidth="false">
           <Toolbar disableGutters>
@@ -93,9 +102,9 @@ export const TopBar = () => {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} href={page} onClick={handleCloseNavMenu}>
+                  <Button key={page} href={page} onClick={handleCloseNavMenu}>
                     <div sx={{ fontFamily: fontType }}>{page}</div>
-                  </MenuItem>
+                  </Button>
                 ))}
               </Menu>
             </Box>
