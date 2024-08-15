@@ -52,5 +52,5 @@ export const Background2 = "#424242";
 export const videoConstraints = {
   width: 1280,
   height: 720,
-  facingMode: "user",
+  facingMode: "environment",
 };

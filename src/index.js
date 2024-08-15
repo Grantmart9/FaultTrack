@@ -17,20 +17,19 @@ import { BrowserRouter } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "react-datetime/css/react-datetime.css";
 import "tailwind.css";
-import { Home } from "UserPages/HomePage";
+import { ScreenLayout } from "components/Display/Screenlayout";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import Cookies from "universal-cookie";
-
 const cookies = new Cookies();
-
 const theme = createTheme({});
 window.theme = theme;
 cookies.set("Token", "", { path: "/" });
 cookies.set("User_id", "", { path: "/" });
+
 ReactDOM.render(
   <ThemeProvider>
     <BrowserRouter>
-      <Home />
+      <ScreenLayout />
     </BrowserRouter>
   </ThemeProvider>,
   document.getElementById("root")

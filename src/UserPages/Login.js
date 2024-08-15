@@ -7,7 +7,7 @@ import {
   buttonColor,
   pageHeading,
   SaveButtonStyle,
-} from "components/DisplaySettings/feutures";
+} from "components/Display/feutures";
 import { Size } from "media-query";
 import Cookies from "universal-cookie";
 import { API_IP } from "components/API/API";

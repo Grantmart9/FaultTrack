@@ -3,7 +3,7 @@ import Slide from "@mui/material/Slide";
 import { TextField } from "@mui/material";
 import Cookies from "universal-cookie";
 import Moment from "moment";
-import { Background1, Background2 } from "./DisplaySettings/feutures";
+import { Background1, Background2 } from "./Display/feutures";
 const cookies = new Cookies();
 
 export const JobDetails = () => {

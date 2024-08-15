@@ -5,7 +5,7 @@ import Switch from "@mui/material/Switch";
 import "react-datepicker/dist/react-datepicker.css";
 import Slide from "@mui/material/Slide";
 import SearchIcon from "@mui/icons-material/Search";
-import { Background1, Background2 } from "./DisplaySettings/feutures";
+import { Background1, Background2 } from "./Display/feutures";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";

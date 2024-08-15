@@ -19,7 +19,7 @@ import {
   Background2,
   fontType,
   SaveButtonStyle,
-} from "components/DisplaySettings/feutures";
+} from "components/Display/feutures";
 const cookies = new Cookies();
 
 const pages = ["HighSites", "Nodes"];

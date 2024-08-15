@@ -16,7 +16,7 @@ import {
   Background1,
   Background2,
   videoConstraints,
-} from "components/DisplaySettings/feutures";
+} from "components/Display/feutures";
 import {
   Sheets,
   Site_sheets,
@@ -28,7 +28,6 @@ import Cookies from "universal-cookie";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { fontType } from "components/DisplaySettings/feutures";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 //import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 //import ThumbDownIcon from "@mui/icons-material/ThumbDown";
@@ -111,6 +110,7 @@ export const HighSites = () => {
                 sx={SaveButtonStyle}
                 fullWidth="true"
                 className="shadow-md"
+                disabled={true}
               >
                 <div>{item.Sheet}</div>
               </Button>

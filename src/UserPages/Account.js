@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Size } from "media-query";
 import Cookies from "universal-cookie";
-import { fontType } from "components/DisplaySettings/feutures";
+import { fontType } from "components/Display/feutures";
 const cookies = new Cookies();
 
 export const Account = () => {

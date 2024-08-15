@@ -5,7 +5,7 @@ import {
   Background1,
   ButtonStyle,
   SaveButtonStyle,
-} from "./DisplaySettings/feutures";
+} from "./Display/feutures";
 
 export const Buttons = ({ handleAdd, handleSearch }) => {
   return (

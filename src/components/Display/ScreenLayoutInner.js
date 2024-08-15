@@ -6,7 +6,7 @@ import { Login } from "UserPages/Login";
 import { Settings } from "UserPages/Settings";
 import { Dashboard } from "UserPages/Dashboard";
 import { Account } from "UserPages/Account";
-import { layoutColor, fontType } from "components/DisplaySettings/feutures";
+import { layoutColor, fontType } from "components/Display/feutures";
 
 const Pages = [
   { page: Nodes, path: "/Nodes" },
