@@ -14,7 +14,7 @@ export const Buttons = ({ handleAdd, handleSearch }) => {
         style={{
           backgroundColor: Background1,
           opacity: "90%",
-          minWidth:"200pt"
+          minWidth:"150pt"
         }}
         className="grid grid-rows-2 gap-2 bg-gray-light rounded-md p-2"
       >

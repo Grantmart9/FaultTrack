@@ -21,13 +21,12 @@ export const SearchBar = () => {
         <div className="grid grid-cols-3 gap-2 rounded-md">
           <div
             style={{ backgroundColor: Background2, opacity: "90%" }}
-            className="inline-flex rounded-md p-4 shadow-md"
+            className="rounded-md p-4 shadow-md"
           >
-            <div className="text-center my-auto text-gray-light">Date</div>
             <div className="my-auto mx-auto">
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DemoContainer components={["DatePicker"]}>
-                  <DatePicker closeOnSelect={true} />
+                  <DatePicker  closeOnSelect={true} />
                 </DemoContainer>
               </LocalizationProvider>
             </div>
@@ -67,13 +66,12 @@ export const SearchBar = () => {
                 fullwidth="true"
                 className="shadow-md"
                 sx={{
-                  backgroundColor: "#424242",
+                  backgroundColor: "#e3e3e3",
                   opacity: "75%",
-                  color: "#ffffff",
                   maxHeight: "30pt",
                 }}
               >
-                <div className="p-2 text-gray-light">
+                <div className="p-2 text-gray-dark">
                   Search
                   <SearchIcon />
                 </div>
