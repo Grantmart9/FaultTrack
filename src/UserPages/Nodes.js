@@ -23,7 +23,7 @@ import {
   Preventative_sheets,
   ConditionList,
 } from "components/Data/Sheets";
-import { JobDetails } from "components/JobDetails";
+import { JobDetails,JobDetailsSmall } from "components/JobDetails";
 import Cookies from "universal-cookie";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -179,18 +179,23 @@ export const Nodes = () => {
                     <div className="grid grid-flow-col gap-1 rounded-md">
                       {ConditionList.map((Condition) => (
                         <Button
+                          size="small"
+                          fullwidth="true"
                           className="shadow-md"
-                          fullWidth="true"
-                          sx={ConditionButtonStyle}
+                          sx={{
+                            backgroundColor: "#e3e3e3",
+                            opacity: "75%",
+                            maxHeight: "30pt",
+                          }}
                         >
                           {Condition == "Good" ? (
-                            <div className="text-gray-light">Good</div>
+                            <div className="text-gray-dark">Good</div>
                           ) : null}
                           {Condition == "Bad" ? (
-                            <div className="text-gray-light">Bad</div>
+                            <div className="text-gray-dark">Bad</div>
                           ) : null}
                           {Condition == "NA" ? (
-                            <div className="text-gray-light">NA</div>
+                            <div className="text-gray-dark">NA</div>
                           ) : null}
                         </Button>
                       ))}
@@ -363,32 +368,6 @@ export const Nodes = () => {
               component="h2"
             >
               Sucessfully Submitted !
-            </Typography>
-          </Box>
-        </Modal>
-      </div>
-    );
-  };
-
-  const PopoverNotes = () => {
-    return (
-      <div>
-        <Modal
-          open={Notes}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box sx={PopoverStyle}>
-            <Typography
-              textAlign="center"
-              id="modal-modal-title"
-              variant="h6"
-              component="h2"
-            >
-              <div className="inline ">
-                <div className="text-center">Note:</div> <TextField />
-              </div>
             </Typography>
           </Box>
         </Modal>
@@ -626,104 +605,6 @@ export const Nodes = () => {
     );
   };
 
-  const JobDetailsSmall = () => {
-    return (
-      <div>
-        <Slide direction="left" in={true} timeout={800}>
-          <div
-            style={{ backgroundColor: Background1, opacity: "90%" }}
-            className="bg-gray-light rounded-md p-1 w-full mt-1"
-          >
-            <div className="grid grid-flow-row gap-2 rounded-md p-1">
-              <div
-                style={{ backgroundColor: Background2, opacity: "90%" }}
-                className="rounded-md p-2"
-              >
-                <div className="grid grid-flow-row gap-1">
-                  <div className="grid grid-flow-col gap-1">
-                    <div className="text-center my-auto text-gray-light">
-                      Site access ref no
-                    </div>
-                    <div className="my-auto">
-                      <TextField
-                        sx={{ backgroundColor: "white" }}
-                        className="rounded-md"
-                        size="small"
-                        fullWidth="true"
-                        placeholder="ex J432212"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid grid-flow-col gap-1">
-                    <div className="text-center my-auto text-gray-light">
-                      GPS co-ordinates
-                    </div>
-                    <div className="my-auto">
-                      <TextField
-                        sx={{ backgroundColor: "white" }}
-                        className="rounded-md"
-                        size="small"
-                        fullWidth="true"
-                        placeholder="ex 39.23.45.12.55"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                style={{ backgroundColor: Background2, opacity: "90%" }}
-                className="rounded-md p-2"
-              >
-                <div className="text-center my-auto text-gray-light">Date</div>
-                <div
-                  style={{
-                    minHeight: "30pt",
-                    alignContent: "center",
-                  }}
-                  className="text-center text-gray-light"
-                >
-                  {Moment(Date()).format("MMMM Do YYYY, h:mm a")}
-                </div>
-              </div>
-              <div
-                style={{ backgroundColor: Background2, opacity: "90%" }}
-                className="rounded-md p-2"
-              >
-                <div className="text-center my-auto text-gray-light">
-                  Technician
-                </div>
-                <div
-                  style={{
-                    minHeight: "30pt",
-                    alignContent: "center",
-                  }}
-                  className="text-center text-gray-light"
-                >
-                  {cookies.get("Username")}
-                </div>
-              </div>
-              <div
-                style={{ backgroundColor: Background2, opacity: "90%" }}
-                className="rounded-md p-2"
-              >
-                <div className="text-center my-auto text-gray-light">Site</div>
-                <div className="flex align-center justify-center">
-                  <TextField
-                    sx={{ backgroundColor: "white" }}
-                    className="rounded-md"
-                    size="small"
-                    fullWidth="true"
-                    placeholder="ex Kannonkop"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </Slide>
-      </div>
-    );
-  };
-
   const SearchBarSmall = () => {
     return (
       <div>
@@ -735,9 +616,8 @@ export const Nodes = () => {
             <div className="grid grid-flow-row gap-2 rounded-md">
               <div
                 style={{ backgroundColor: Background2, opacity: "90%" }}
-                className="grid grid-flow-col gap-1 rounded-md p-1 shadow-md"
+                className="rounded-md p-2 shadow-md"
               >
-                <div className="text-center my-auto text-gray-light">Date</div>
                 <div className="my-auto mx-auto">
                   <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DemoContainer components={["DatePicker"]}>
@@ -783,13 +663,12 @@ export const Nodes = () => {
                     fullwidth="true"
                     className="shadow-md"
                     sx={{
-                      backgroundColor: "#424242",
+                      backgroundColor: "#e3e3e3",
                       opacity: "75%",
-                      color: "#ffffff",
                       maxHeight: "30pt",
                     }}
                   >
-                    <div className="p-2 text-gray-light">
+                    <div className="p-2 text-gray-dark">
                       Search
                       <SearchIcon />
                     </div>
@@ -808,7 +687,7 @@ export const Nodes = () => {
       style={{ backgroundColor: "#bfbfbf", padding: "5pt" }}
       className="rounded-t-md rounded-b-md"
     >
-      {size == "MD" || size == "SM" || size == "XS" ? (
+      {size == "SM" || size == "XS" || size == "MD" ? (
         <div>
           <div
             style={{ color: "#da4540", font: "bold", marginTop: "1%" }}
@@ -840,7 +719,7 @@ export const Nodes = () => {
             ) : null}
           </div>
           <PopoverSaved />
-          <PopoverNotes />
+
           <PopoverSubmitted />
           <PopoverCamera />
         </div>
@@ -882,7 +761,7 @@ export const Nodes = () => {
             ) : null}
           </div>
           <PopoverSaved />
-          <PopoverNotes />
+
           <PopoverSubmitted />
           <PopoverCamera />
         </div>
