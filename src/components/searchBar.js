@@ -11,15 +11,19 @@ import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
-import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-
+import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
+import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 
 export const SearchBar = () => {
   const size = Size();
   return (
     <Slide direction="left" in={true} timeout={1200}>
-      {size == "SM" || size == "XS" || size == "MD" ? (
+      {size == "SM" ||
+      size == "XS" ||
+      size == "MD" ||
+      size == "L" ||
+      size == "XL" ||
+      size == "2XL" ? (
         <div
           style={{ backgroundColor: Background1, opacity: "90%" }}
           className="rounded-md p-2 ml-1"
@@ -37,28 +41,69 @@ export const SearchBar = () => {
                 </LocalizationProvider>
               </div>
             </div>
-            <div
-              style={{ backgroundColor: Background2, opacity: "90%" }}
-              className="rounded-md p-1 shadow-inner"
-            >
-              <div className="rounded-md text-center my-auto text-gray-light mb-1">
-                Search by
-              </div>
-              <div className="rounded-md grid grid-cols-3 p-1">
-                <div className="text-center my-auto text-gray-light">Site</div>
-                <div className="flex align-center justify-center">
-                  <Switch color="error" />
+
+            {size == "L" ? (
+              <div
+                style={{ backgroundColor: Background2, opacity: "90%" }}
+                className="rounded-md p-1 shadow-inner"
+              >
+                <div className=" rounded-md text-center my-auto text-gray-light">
+                  Search by
                 </div>
-                <div className="text-center my-auto text-gray-light">
-                  Technician
+                <div className="rounded-md grid grid-cols-2 gap-1 p-1">
+                  <Button
+                    size="small"
+                    fullwidth="true"
+                    className="shadow-md"
+                    sx={{
+                      backgroundColor: "#e3e3e3",
+                      opacity: "75%",
+                      maxHeight: "30pt",
+                    }}
+                  >
+                    <div className="text-xs text-gray-dark">Site</div>
+                  </Button>
+                  <Button
+                    size="small"
+                    fullwidth="true"
+                    className="shadow-md"
+                    
+                    sx={{
+                      backgroundColor: "#e3e3e3",
+                      opacity: "75%",
+                      maxHeight: "30pt",
+                    }}
+                  >
+                    <div className="text-xs text-gray-dark">Technician</div>
+                  </Button>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div
+                style={{ backgroundColor: Background2, opacity: "90%" }}
+                className="rounded-md p-1 shadow-inner"
+              >
+                <div className="rounded-md text-center my-auto text-gray-light">
+                  Search by
+                </div>
+                <div className="rounded-md grid grid-cols-3 p-1">
+                  <div className="text-center my-auto text-gray-light">
+                    Site
+                  </div>
+                  <div className="flex align-center justify-center">
+                    <Switch color="error" />
+                  </div>
+                  <div className="text-center my-auto text-gray-light">
+                    Technician
+                  </div>
+                </div>
+              </div>
+            )}
             <div
               style={{ backgroundColor: Background2, opacity: "90%" }}
               className="grid grid-flow-row rounded-md p-1 shadow-md"
             >
-              <div className="ml-2 my-auto">
+              <div className="my-auto">
                 <TextField
                   sx={{ backgroundColor: "white" }}
                   className="rounded-md"
@@ -99,7 +144,11 @@ export const SearchBar = () => {
               <div className="my-auto mx-auto">
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DemoContainer components={["DatePicker"]}>
-                    <DatePicker size="small" orientation="portrait" closeOnSelect={true} />
+                    <DatePicker
+                      size="small"
+                      orientation="portrait"
+                      closeOnSelect={true}
+                    />
                   </DemoContainer>
                 </LocalizationProvider>
               </div>
@@ -108,7 +157,7 @@ export const SearchBar = () => {
               style={{ backgroundColor: Background2, opacity: "90%" }}
               className="rounded-md p-1 shadow-inner"
             >
-              <div className="rounded-md text-center my-auto text-gray-light mb-1">
+              <div className="rounded-md text-center my-auto text-gray-light">
                 Search by
               </div>
               <div className="rounded-md grid grid-cols-3 p-1">

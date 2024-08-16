@@ -100,33 +100,23 @@ export const JobDetails = () => {
         ) : null}
         {size == "XL" ? (
           <div className="grid grid-flow-col gap-1">
-            <div className="grid grid-flow-col gap-1">
-              <div className="text-center my-auto text-gray-light">
-                Site access ref no
-              </div>
-              <div className="my-auto">
-                <TextField
-                  sx={{ backgroundColor: "white" }}
-                  className="rounded-md"
-                  size="small"
-                  fullWidth="true"
-                  placeholder="ex J432212"
-                />
-              </div>
+            <div className="my-auto">
+              <TextField
+                sx={{ backgroundColor: "white" }}
+                className="rounded-md"
+                size="small"
+                fullWidth="true"
+                placeholder="Site access ref no"
+              />
             </div>
-            <div className="grid grid-flow-col gap-1">
-              <div className="text-center my-auto text-gray-light">
-                GPS co-ordinates
-              </div>
-              <div className="my-auto">
-                <TextField
-                  sx={{ backgroundColor: "white" }}
-                  className="rounded-md"
-                  size="small"
-                  fullWidth="true"
-                  placeholder="ex 39.23.45.12.55"
-                />
-              </div>
+            <div className="my-auto">
+              <TextField
+                sx={{ backgroundColor: "white" }}
+                className="rounded-md"
+                size="small"
+                fullWidth="true"
+                placeholder="GPS co-ordinates"
+              />
             </div>
           </div>
         ) : null}
@@ -152,7 +142,9 @@ export const JobDetails = () => {
               style={{ backgroundColor: Background2, opacity: "90%" }}
               className="inline-flex rounded-md p-2"
             >
-              <div className="text-center my-auto text-gray-light mr-2">Date:</div>
+              <div className="text-center my-auto text-gray-light mr-2">
+                Date:
+              </div>
               <div
                 style={{
                   minHeight: "30pt",
@@ -167,8 +159,8 @@ export const JobDetails = () => {
               style={{ backgroundColor: Background2, opacity: "90%" }}
               className="inline-flex rounded-md p-2"
             >
-              <div className="text-center my-auto text-gray-light">
-                Technician
+              <div className="text-center my-auto text-gray-light mr-1">
+                Technician:
               </div>
               <div
                 style={{
@@ -184,7 +176,9 @@ export const JobDetails = () => {
               style={{ backgroundColor: Background2, opacity: "90%" }}
               className="inline-flex rounded-md p-2"
             >
-              <div className="text-center my-auto text-gray-light mr-2">Site:</div>
+              <div className="text-center my-auto text-gray-light mr-2">
+                Site:
+              </div>
               <div className="flex align-center justify-center">
                 <TextField
                   sx={{ backgroundColor: "white" }}
