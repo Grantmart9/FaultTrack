@@ -164,6 +164,7 @@ export const Nodes = () => {
                     SheetButtons={SheetButtons}
                     handleObservation={handleObservation}
                     handleRepair={handleRepair}
+                    handleSubmit={handleSubmit}
                   />
                 </div>
               ) : (
@@ -187,6 +188,7 @@ export const Nodes = () => {
                     SheetButtons={SheetButtons}
                     handleObservation={handleObservation}
                     handleRepair={handleRepair}
+                    handleSubmit={handleSubmit}
                   />
                 </div>
               )}
