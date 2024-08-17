@@ -85,7 +85,7 @@ export const Login = ({ setJWT }) => {
         <>
           {size == "MD" || size == "SM" || size == "XS" ? (
             <div
-              style={{ color: pageHeading, marginTop: "25%" }}
+              style={{ color: pageHeading, marginTop: "30%" }}
               className="flex justify-center"
             >
               <div className="flex rounded shadow-md p-10">
@@ -151,7 +151,7 @@ export const Login = ({ setJWT }) => {
             </div>
           ) : (
             <div
-              style={{ color: pageHeading, marginTop: "5%" }}
+              style={{ color: pageHeading, marginTop: "10%" }}
               className="flex justify-center"
             >
               <div className="flex rounded shadow-md p-10">

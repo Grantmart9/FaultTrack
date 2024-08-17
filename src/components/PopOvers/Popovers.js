@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
@@ -60,6 +60,17 @@ export const PopoverSubmitted = ({ Submitted, handleClose }) => {
 };
 
 export const PopoverCamera = ({ Camera, handleClose }) => {
+  const webcamRef = useRef(null);
+  const [url, setUrl] = React.useState(null);
+
+  const capturePhoto = React.useCallback(async () => {
+    const imageSrc = webcamRef.current.getScreenshot();
+    setUrl(imageSrc);
+  }, [webcamRef]);
+
+  const onUserMedia = (e) => {
+    console.log(e);
+  };
   return (
     <div>
       <Modal
@@ -75,26 +86,24 @@ export const PopoverCamera = ({ Camera, handleClose }) => {
             variant="h6"
             component="h2"
           >
-            <Webcam
-              audio={false}
-              height={720}
-              screenshotFormat="image/jpeg"
-              width={1280}
-              videoConstraints={videoConstraints}
-            >
-              {({ getScreenshot }) => (
-                <div className="mt-3">
-                  <Button
-                    sx={SaveButtonStyle}
-                    onClick={() => {
-                      const imageSrc = getScreenshot();
-                    }}
-                  >
-                    Capture photo
-                  </Button>
+            <>
+              <Webcam
+                ref={webcamRef}
+                audio={true}
+                screenshotFormat="image/jpeg"
+                videoConstraints={videoConstraints}
+                onUserMedia={onUserMedia}
+              />
+              <div className="grid grid-rows-2 gap-1 mt-1 mb-1">
+                <Button sx={SaveButtonStyle} onClick={capturePhoto}>Capture</Button>
+                <Button sx={SaveButtonStyle} onClick={() => setUrl(null)}>Refresh</Button>
+              </div>
+              {url && (
+                <div>
+                  <img src={url} alt="Screenshot" />
                 </div>
               )}
-            </Webcam>
+            </>
           </Typography>
         </Box>
       </Modal>
