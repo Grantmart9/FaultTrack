@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import logo from "Images/logo.png";
 import Cookies from "universal-cookie";
+import Fade from "@mui/material/Fade";
 import {
   Background1,
   Background2,
@@ -70,7 +71,9 @@ export const TopBar = () => {
                 textDecoration: "none",
               }}
             >
-              <img width={130} src={logo} alt={logo} />
+              <Fade in={true} timeout={600}>
+                <img width={130} src={logo} alt={logo} />
+              </Fade>
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
@@ -110,7 +113,6 @@ export const TopBar = () => {
                 </div>
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
             <Typography
               variant="h5"
               noWrap
@@ -127,7 +129,9 @@ export const TopBar = () => {
                 textDecoration: "none",
               }}
             >
-              <img style={{maxWidth:"100pt"}} src={logo} alt={logo} />
+              <Fade in={true} timeout={600}>
+                <img style={{ maxWidth: "100pt" }} src={logo} alt={logo} />
+              </Fade>
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
