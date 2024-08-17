@@ -149,12 +149,9 @@ const Questions = ({
               </div>
             ))}
             <div className="flex align-center justify-center mt-2 mb-2">
-              <div className="grid grid-cols-2 gap-1">
+              <div className="flex align-center justify-center">
                 <Button onClick={handleOpen} sx={CameraButtonStyle}>
                   Save
-                </Button>
-                <Button onClick={handleSubmit} sx={CameraButtonStyle}>
-                  Submit
                 </Button>
               </div>
             </div>
@@ -226,12 +223,9 @@ const Questions = ({
               </div>
             ))}
             <div className="flex align-center justify-center mt-2 mb-2">
-              <div className="grid grid-cols-2 gap-1">
+              <div className="flex align-center justify-center">
                 <Button onClick={handleOpen} sx={CameraButtonStyle}>
                   Save
-                </Button>
-                <Button onClick={handleSubmit} sx={CameraButtonStyle}>
-                  Submit
                 </Button>
               </div>
             </div>

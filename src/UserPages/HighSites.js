@@ -164,6 +164,7 @@ export const HighSites = () => {
                     SheetButtons={SheetButtons}
                     handleObservation={handleObservation}
                     handleRepair={handleRepair}
+                    handleSubmit={handleSubmit}
                   />
                 </div>
               ) : (
@@ -187,6 +188,7 @@ export const HighSites = () => {
                     SheetButtons={SheetButtons}
                     handleObservation={handleObservation}
                     handleRepair={handleRepair}
+                    handleSubmit={handleSubmit}
                   />
                 </div>
               )}
