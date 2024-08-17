@@ -42,13 +42,13 @@ export const HighSites = () => {
     setSheet("Repaired");
     console.log(Sheet);
   };
-  
+
   const handleClose = () => {
     setSaved(false);
     setSubmitted(false);
     setCamera(false);
   };
-  
+
   const handleAdd = () => {
     setButtonStatus("Check_sheets");
   };
@@ -78,7 +78,7 @@ export const HighSites = () => {
     >
       <div>
         <div
-          style={{ color: "#da4540", font: "bold", marginTop: "1%" }}
+          style={{ color: "#da4540", font: "bold" }}
           className="text-2xl font-bold font-sans flex align-center justify-center p-2 w-full"
         >
           High Sites

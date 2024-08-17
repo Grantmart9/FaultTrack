@@ -76,7 +76,7 @@ export const JobDetails = () => {
   };
 
   return (
-    <Slide direction="left" in={true} timeout={800}>
+    <Slide direction="left" in={true} timeout={1200}>
       {size == "XS" || size == "SM" || size == "MD" ? (
         <div
           style={{ backgroundColor: Background1, opacity: "90%" }}

@@ -9,7 +9,7 @@ import Paper from "@mui/material/Paper";
 import { TextField } from "@mui/material";
 import Button from "@mui/material/Button";
 import { Fade } from "@material-ui/core";
-import { SaveButtonStyle, Background1 } from "components/Display/feutures";
+import { SaveButtonStyle, Background1,Background2 } from "components/Display/feutures";
 
 export const PreventativeSheet = ({
   handleObservation,
@@ -27,8 +27,12 @@ export const PreventativeSheet = ({
           <Button onClick={handleRepair} sx={SaveButtonStyle}>Repaired</Button>
         </div>
         <div
-          style={{ backgroundColor: Background1, opacity: "90%" }}
-          className="flex align-center justify-center p-1 rounded-md mt-1 mb-1"
+          style={{
+            backgroundColor: Background2,
+            opacity: "60%",
+            color: "white",
+          }}
+          className="text-center my-auto p-3 rounded-md mb-1"
         >
           {Sheet}
         </div>

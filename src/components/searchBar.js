@@ -93,7 +93,7 @@ const SearchField = () => {
           style={{ backgroundColor: Background2, opacity: "90%" }}
           className="grid grid-flow-row rounded-md p-1 shadow-md"
         >
-          <div className="my-auto">
+          <div className="mx-auto my-auto">
             <TextField
               sx={{ backgroundColor: "white" }}
               className="rounded-md"
@@ -124,7 +124,7 @@ const SearchField = () => {
           style={{ backgroundColor: Background2, opacity: "90%" }}
           className="grid grid-flow-row rounded-md p-1 shadow-md"
         >
-          <div className="my-auto">
+          <div className="mx-auto my-auto">
             <TextField
               sx={{ backgroundColor: "white" }}
               className="rounded-md"
