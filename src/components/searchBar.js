@@ -77,13 +77,9 @@ const SearchBy = () => {
 const DateTimePicker = () => {
   return (
     <>
-      <div className="my-auto mx-auto">
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DemoContainer components={["MobileDatePicker"]}>
-            <MobileDatePicker closeOnSelect={true} />
-          </DemoContainer>
-        </LocalizationProvider>
-      </div>
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <DesktopDatePicker closeOnSelect={true} />
+      </LocalizationProvider>
     </>
   );
 };
@@ -136,7 +132,7 @@ const SearchField = () => {
               fullWidth="true"
             />
           </div>
-          <div className="flex mx-auto my-auto">
+          <div className="flex mx-auto my-auto mt-1">
             <Button
               size="small"
               fullwidth="true"
@@ -171,7 +167,7 @@ export const SearchBar = () => {
           <div className="grid grid-flow-row gap-2 rounded-md">
             <div
               style={{ backgroundColor: Background2, opacity: "90%" }}
-              className="rounded-md p-4 shadow-md"
+              className="flex align-center justify-center rounded-md p-4 shadow-md"
             >
               <DateTimePicker />
             </div>
@@ -187,7 +183,7 @@ export const SearchBar = () => {
           <div className="grid grid-flow-col gap-2 rounded-md">
             <div
               style={{ backgroundColor: Background2, opacity: "90%" }}
-              className="rounded-md p-4 shadow-md"
+              className="flex align-center justify-center rounded-md p-4 shadow-md"
             >
               <DateTimePicker />
             </div>

@@ -35,8 +35,17 @@ export const Nodes = () => {
   const [ButtonStatus, setButtonStatus] = useState("Search");
   const handleOpen = () => setSaved(true);
   const handleSubmit = () => setSubmitted(true);
+
   const [Saved, setSaved] = useState(false);
   const [Sheet, setSheet] = useState("Observation");
+  const handleObservation = () => {
+    setSheet("Observation");
+    console.log(Sheet);
+  };
+  const handleRepair = () => {
+    setSheet("Repaired");
+    console.log(Sheet);
+  };
   const [Camera, setCamera] = useState(false);
   const [Submitted, setSubmitted] = useState(false);
 
@@ -369,6 +378,8 @@ export const Nodes = () => {
                   <PreventativeSheet
                     Sheet={Sheet}
                     SheetButtons={SheetButtons}
+                    handleObservation={handleObservation}
+                    handleRepair={handleRepair}
                   />
                 </div>
               ) : (
@@ -377,6 +388,8 @@ export const Nodes = () => {
                     <Buttons
                       handleAdd={handleAdd}
                       handleSearch={handleSearch}
+                      handleObservation={handleObservation}
+                      handleRepair={handleRepair}
                     />
                     <JobDetails />
                   </div>
@@ -384,6 +397,8 @@ export const Nodes = () => {
                   <PreventativeSheet
                     Sheet={Sheet}
                     SheetButtons={SheetButtons}
+                    handleObservation={handleObservation}
+                    handleRepair={handleRepair}
                   />
                 </div>
               )}
