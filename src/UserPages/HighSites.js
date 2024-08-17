@@ -23,11 +23,8 @@ import {
   Preventative_sheets,
   ConditionList,
 } from "components/Data/Sheets";
-import { JobDetails,JobDetailsSmall } from "components/JobDetails";
+import { JobDetails, JobDetailsSmall } from "components/JobDetails";
 import Cookies from "universal-cookie";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 //import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 //import ThumbDownIcon from "@mui/icons-material/ThumbDown";
@@ -47,8 +44,12 @@ import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import {
+  PopoverCamera,
+  PopoverSaved,
+  PopoverSubmitted,
+} from "components/PopOvers/Popovers";
 const cookies = new Cookies();
-const WebcamComponent = () => <Webcam />;
 
 export const HighSites = () => {
   const [QuestionSheet, setQuestionSheet] = useState(Sheets[0].Questions);
@@ -324,97 +325,6 @@ export const HighSites = () => {
           </div>
         </div>
       </Fade>
-    );
-  };
-
-  const PopoverSaved = () => {
-    return (
-      <div>
-        <Modal
-          open={Saved}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box sx={PopoverStyle}>
-            <Typography
-              textAlign="center"
-              id="modal-modal-title"
-              variant="h6"
-              component="h2"
-            >
-              Sucessfully Saved !
-            </Typography>
-          </Box>
-        </Modal>
-      </div>
-    );
-  };
-
-  const PopoverSubmitted = () => {
-    return (
-      <div>
-        <Modal
-          open={Submitted}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box sx={PopoverStyle}>
-            <Typography
-              textAlign="center"
-              id="modal-modal-title"
-              variant="h6"
-              component="h2"
-            >
-              Sucessfully Submitted !
-            </Typography>
-          </Box>
-        </Modal>
-      </div>
-    );
-  };
-
-  const PopoverCamera = () => {
-    return (
-      <div>
-        <Modal
-          open={Camera}
-          onClose={handleClose}
-          aria-labelledby="modal-modal-title"
-          aria-describedby="modal-modal-description"
-        >
-          <Box sx={PopoverStyle}>
-            <Typography
-              textAlign="center"
-              id="modal-modal-title"
-              variant="h6"
-              component="h2"
-            >
-              <Webcam
-                audio={false}
-                height={720}
-                screenshotFormat="image/jpeg"
-                width={1280}
-                videoConstraints={videoConstraints}
-              >
-                {({ getScreenshot }) => (
-                  <div className="mt-3">
-                    <Button
-                      sx={SaveButtonStyle}
-                      onClick={() => {
-                        const imageSrc = getScreenshot();
-                      }}
-                    >
-                      Capture photo
-                    </Button>
-                  </div>
-                )}
-              </Webcam>
-            </Typography>
-          </Box>
-        </Modal>
-      </div>
     );
   };
 
@@ -718,10 +628,9 @@ export const HighSites = () => {
               </div>
             ) : null}
           </div>
-          <PopoverSaved />
-
-          <PopoverSubmitted />
-          <PopoverCamera />
+          <PopoverSaved Saved={Saved} handleClose={handleClose} />
+          <PopoverSubmitted Submitted={Submitted} handleClose={handleClose} />
+          <PopoverCamera Camera={Camera} handleClose={handleClose} />
         </div>
       ) : (
         <div>
@@ -760,10 +669,9 @@ export const HighSites = () => {
               </div>
             ) : null}
           </div>
-          <PopoverSaved />
-
-          <PopoverSubmitted />
-          <PopoverCamera />
+          <PopoverSaved Saved={Saved} handleClose={handleClose} />
+          <PopoverSubmitted Submitted={Submitted} handleClose={handleClose} />
+          <PopoverCamera Camera={Camera} handleClose={handleClose} />
         </div>
       )}
     </div>

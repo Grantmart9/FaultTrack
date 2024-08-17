@@ -285,11 +285,71 @@ export const JobDetailsSmall = () => {
     );
   };
 
+  const DateWidget = () => {
+    return (
+      <div
+        style={{ backgroundColor: Background2, opacity: "90%" }}
+        className="rounded-md p-2"
+      >
+        <div className="text-center my-auto text-gray-light">Date</div>
+        <div
+          style={{
+            minHeight: "30pt",
+            alignContent: "center",
+          }}
+          className="text-center text-gray-light"
+        >
+          {Moment(Date()).format("MMMM Do YYYY, h:mm a")}
+        </div>
+      </div>
+    );
+  };
+
+  const BadgeWidget = () => {
+    return (
+      <div
+        style={{ backgroundColor: Background2, opacity: "90%" }}
+        className="rounded-md p-2"
+      >
+        <div className="text-center my-auto text-gray-light">Technician</div>
+        <div
+          style={{
+            minHeight: "30pt",
+            alignContent: "center",
+          }}
+          className="text-center text-gray-light"
+        >
+          {cookies.get("Username")}
+        </div>
+      </div>
+    );
+  };
+
+  const Site = () => {
+    return (
+      <div
+        style={{ backgroundColor: Background2, opacity: "90%" }}
+        className="rounded-md p-2"
+      >
+        <div className="text-center my-auto text-gray-light">Site</div>
+        <div className="flex align-center justify-center">
+          <TextField
+            sx={{ backgroundColor: "white" }}
+            className="rounded-md"
+            size="small"
+            fullWidth="true"
+            placeholder="ex Kannonkop"
+          />
+        </div>
+      </div>
+    );
+  };
+
   return (
     <Slide direction="left" in={true} timeout={800}>
       <div
         style={{ backgroundColor: Background1, opacity: "90%" }}
-        className="bg-gray-light rounded-md p-1 mt-1 w-full"
+        className="bg-gray-light rounded-md p-1 w-full"
       >
         <div className="grid grid-flow-row gap-2 rounded-md p-1">
           <div
@@ -298,53 +358,9 @@ export const JobDetailsSmall = () => {
           >
             <SiteDetails />
           </div>
-          <div
-            style={{ backgroundColor: Background2, opacity: "90%" }}
-            className="rounded-md p-2"
-          >
-            <div className="text-center my-auto text-gray-light">Date</div>
-            <div
-              style={{
-                minHeight: "30pt",
-                alignContent: "center",
-              }}
-              className="text-center text-gray-light"
-            >
-              {Moment(Date()).format("MMMM Do YYYY, h:mm a")}
-            </div>
-          </div>
-          <div
-            style={{ backgroundColor: Background2, opacity: "90%" }}
-            className="rounded-md p-2"
-          >
-            <div className="text-center my-auto text-gray-light">
-              Technician
-            </div>
-            <div
-              style={{
-                minHeight: "30pt",
-                alignContent: "center",
-              }}
-              className="text-center text-gray-light"
-            >
-              {cookies.get("Username")}
-            </div>
-          </div>
-          <div
-            style={{ backgroundColor: Background2, opacity: "90%" }}
-            className="rounded-md p-2"
-          >
-            <div className="text-center my-auto text-gray-light">Site</div>
-            <div className="flex align-center justify-center">
-              <TextField
-                sx={{ backgroundColor: "white" }}
-                className="rounded-md"
-                size="small"
-                fullWidth="true"
-                placeholder="ex Kannonkop"
-              />
-            </div>
-          </div>
+          <DateWidget />
+          <BadgeWidget />
+          <Site />
         </div>
       </div>
     </Slide>
