@@ -89,20 +89,32 @@ export const PopoverCamera = ({ Camera, handleClose }) => {
             <>
               <Webcam
                 ref={webcamRef}
-                audio={true}
+                audio={false}
                 screenshotFormat="image/jpeg"
                 videoConstraints={videoConstraints}
                 onUserMedia={onUserMedia}
               />
-              <div className="grid grid-rows-2 gap-1 mt-1 mb-1">
-                <Button sx={SaveButtonStyle} onClick={capturePhoto}>Capture</Button>
-                <Button sx={SaveButtonStyle} onClick={() => setUrl(null)}>Refresh</Button>
+              <div className="mt-1 mb-1">
+                <Button sx={SaveButtonStyle} onClick={capturePhoto}>
+                  Capture
+                </Button>
               </div>
               {url && (
                 <div>
                   <img src={url} alt="Screenshot" />
                 </div>
               )}
+              <div className="grid grid-cols-2 gap-1 mt-1">
+                <Button sx={SaveButtonStyle}>Save</Button>
+                <Button sx={SaveButtonStyle} onClick={() => setUrl(null)}>
+                  Recapture
+                </Button>
+              </div>
+              <div className="mt-1">
+                <Button sx={SaveButtonStyle} onClick={handleClose}>
+                  Close
+                </Button>
+              </div>
             </>
           </Typography>
         </Box>
