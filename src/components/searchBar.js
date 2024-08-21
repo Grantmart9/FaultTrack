@@ -15,12 +15,16 @@ const SearchBy = () => {
   const size = Size();
   return (
     <>
-      {size == "L" ? (
+      {size == "XS" ||
+      size == "SM" ||
+      size == "MD" ||
+      size == "L" ||
+      size == "XL" ? (
         <div
           style={{ backgroundColor: Background2, opacity: "90%" }}
-          className="flex justify-center rounded-md p-1 shadow-inner"
+          className="flex justify-center align-center rounded-md p-1 shadow-inner"
         >
-          <div className="block">
+          <div className="grid grid-flow-row">
             <div className="text-center my-auto text-gray-light">Search By</div>
             <div className="my-auto">
               <MenuSimple />
@@ -32,7 +36,7 @@ const SearchBy = () => {
           style={{ backgroundColor: Background2, opacity: "90%" }}
           className="flex justify-center rounded-md p-1 shadow-inner"
         >
-          <div className="block">
+          <div className="grid grid-flow-col gap-1">
             <div className="text-center my-auto text-gray-light">Search By</div>
             <div className="my-auto">
               <MenuSimple />
@@ -45,11 +49,91 @@ const SearchBy = () => {
 };
 
 const DateTimePicker = () => {
+  const size = Size();
   return (
     <>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DesktopDatePicker closeOnSelect={true} />
-      </LocalizationProvider>
+      {size == "XS" ||
+      size == "SM" ||
+      size == "MD" ||
+      size == "L" ||
+      size == "XL" ? (
+        <div className="block">
+          <div className="grid grid-flow-col gap-1 mb-3">
+            <Button
+              size="small"
+              fullwidth="true"
+              className="shadow-md"
+              sx={{
+                backgroundColor: "#e3e3e3",
+                opacity: "75%",
+                maxHeight: "20pt",
+                color: "black",
+              }}
+            >
+              Search From
+            </Button>
+            <Button
+              size="small"
+              fullwidth="true"
+              className="shadow-md"
+              sx={{
+                backgroundColor: "#e3e3e3",
+                opacity: "75%",
+                maxHeight: "20pt",
+                color: "black",
+              }}
+            >
+              Search On
+            </Button>
+          </div>
+          <div className="my-auto ml-2 ">
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DesktopDatePicker closeOnSelect={true} />
+            </LocalizationProvider>
+          </div>
+        </div>
+      ) : (
+        <div className="inline-flex">
+          <div className="grid grid-flow-row gap-1">
+            <Button
+              size="small"
+              fullwidth="true"
+              className="shadow-md"
+              sx={{
+                backgroundColor: "#e3e3e3",
+                opacity: "75%",
+                maxHeight: "20pt",
+                color: "black",
+                marginRight: "20pt",
+              }}
+            >
+              Search From
+            </Button>
+            <Button
+              size="small"
+              fullwidth="true"
+              className="shadow-md"
+              sx={{
+                backgroundColor: "#e3e3e3",
+                opacity: "75%",
+                maxHeight: "20pt",
+                color: "black",
+                marginRight: "20pt",
+              }}
+            >
+              Search On
+            </Button>
+          </div>
+          <div className="my-auto mx-2">
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DesktopDatePicker
+                sx={{ maxHeight: "20pt" }}
+                closeOnSelect={true}
+              />
+            </LocalizationProvider>
+          </div>
+        </div>
+      )}
     </>
   );
 };
@@ -58,7 +142,7 @@ const SearchField = () => {
   const size = Size();
   return (
     <>
-      {size == "XS" || size == "SM" || size == "MD" ? (
+      {size == "XS" || size == "SM" || size == "MD" || size == "L" ? (
         <div
           style={{ backgroundColor: Background2, opacity: "90%" }}
           className="grid grid-flow-row rounded-md p-1 shadow-md"
@@ -92,9 +176,9 @@ const SearchField = () => {
       ) : (
         <div
           style={{ backgroundColor: Background2, opacity: "90%" }}
-          className="grid grid-flow-row rounded-md p-1 shadow-md"
+          className="grid grid-flow-col gap-1 rounded-md p-1 shadow-md"
         >
-          <div className="mx-auto my-auto">
+          <div className="mx-auto my-auto p-2">
             <TextField
               sx={{ backgroundColor: "white" }}
               className="rounded-md"
@@ -102,7 +186,7 @@ const SearchField = () => {
               fullWidth="true"
             />
           </div>
-          <div className="flex mx-auto my-auto mt-1">
+          <div className="mx-auto my-auto p-2">
             <Button
               size="small"
               fullwidth="true"

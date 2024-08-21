@@ -142,6 +142,841 @@ export const Sheets = [
   },
 ];
 
+const dataModel = () => {
+  const SiteDetails = {
+    site: "",
+    date: "",
+    Technician: "",
+    site_ref_no: "",
+    GPS: "",
+  };
+
+  const mapped = () => {
+    Sheets.map((sheet) => ({ sheet }));
+  };
+  console.log(SiteDetails)
+
+  return { dataModel, mapped };
+};
+
+export const Model = {
+  site: "",
+  date: "",
+  Technician: "",
+  site_ref_no: "",
+  GPS: "",
+  Sheets: {
+    "Tower (A)": {
+      q1: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q2: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q3: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q4: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q5: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q6: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q7: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q8: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q9: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q10: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q11: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q12: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q13: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q14: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q15: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q16: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q17: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q18: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q19: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q20: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q21: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q22: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q23: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q24: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q25: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q26: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q27: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q28: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q29: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q30: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q31: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q32: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q33: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q34: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q35: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q36: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q37: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q38: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q39: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q40: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+    },
+    "Tower (B)": {
+      q1: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q2: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q3: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q4: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q5: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q6: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q7: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q8: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q9: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q10: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q11: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q12: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q13: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q14: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q15: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q16: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q17: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q18: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q19: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q20: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q21: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q22: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q23: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q24: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q25: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q26: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q27: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q28: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q29: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q30: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q31: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q32: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q33: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q34: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q35: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q36: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q37: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q38: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q39: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q40: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+    },
+    "Tower (C)": {
+      q1: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q2: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q3: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q4: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q5: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q6: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q7: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q8: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q9: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q10: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q11: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q12: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q13: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q14: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q15: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q16: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q17: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q18: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q19: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q20: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q21: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q22: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q23: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q24: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q25: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q26: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q27: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q28: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q29: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q30: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q31: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q32: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q33: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q34: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q35: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q36: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q37: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q38: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q39: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q40: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+    },
+    "Tower (D)": {
+      q1: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q2: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q3: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q4: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q5: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q6: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q7: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q8: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q9: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q10: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q11: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q12: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q13: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q14: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q15: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q16: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q17: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q18: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q19: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q20: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q21: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q22: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q23: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q24: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q25: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q26: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q27: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q28: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q29: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q30: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q31: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q32: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q33: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q34: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q35: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q36: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q37: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q38: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q39: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+      q40: {
+        State: "",
+        observation: "",
+        images: "",
+      },
+    },
+  },
+};
+
 export const Site_sheets = [
   {
     Site: "Site_1",
@@ -244,6 +1079,7 @@ export const Site_sheets = [
     Technician: "Waheeb",
   },
 ];
+
 
 export const Preventative_sheets = [
   "Item descript",

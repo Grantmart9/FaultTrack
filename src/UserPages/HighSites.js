@@ -27,6 +27,26 @@ export const HighSites = () => {
   const [Camera, setCamera] = useState(false);
   const [Submitted, setSubmitted] = useState(false);
 
+  var mapp;
+  const t = {
+    State: "",
+    observation: "",
+    images: "",
+  };
+
+  useEffect(() => {
+    const Sheet = Sheets.map((sheet) => sheet);
+    const Questions = Sheet.map((q) => q.Questions);
+    const sheet_1 = Questions[0];
+    const sheet_2 = Questions[1];
+    const sheet_3 = Questions[2];
+    const sheet_4 = Questions[3];
+    const Mapped = sheet_1.map((q) => ({
+      q: { State: "", observation: "", images: "" },
+    }));
+    console.log(Mapped);
+  }, []);
+
   const size = Size();
   Moment.locale("en");
 

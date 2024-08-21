@@ -103,7 +103,7 @@ export const JobDetails = () => {
                 }}
                 className="text-center text-gray-light"
               >
-                {Moment(Date()).format("MMMM Do YYYY, h:mm a")}
+                {Moment(Date()).format("MMMM Do YYYY")}
               </div>
             </div>
             <div
@@ -147,7 +147,7 @@ export const JobDetails = () => {
           <div className="grid grid-flow-col gap-2 rounded-md p-1">
             <div
               style={{ backgroundColor: Background2, opacity: "90%" }}
-              className="rounded-md p-2"
+              className="rounded-md p-3"
             >
               <SiteDetails />
             </div>
@@ -163,7 +163,7 @@ export const JobDetails = () => {
                 }}
                 className="text-center text-gray-light"
               >
-                {Moment(Date()).format("MMMM Do YYYY, h:mm a")}
+                {Moment(Date()).format("MMMM Do YYYY")}
               </div>
             </div>
             <div

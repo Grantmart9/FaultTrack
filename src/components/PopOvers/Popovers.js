@@ -70,6 +70,7 @@ export const PopoverCamera = ({ Camera, handleClose }) => {
 
   const onUserMedia = (e) => {
     console.log(e);
+    console.log(url);
   };
   return (
     <div>
